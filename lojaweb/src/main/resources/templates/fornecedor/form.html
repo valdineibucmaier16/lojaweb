@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt"
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    layout:decorate="~{layout/layout-padrao}">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>LojaWeb</title>
+</head>
+<body>
+        
+        
+        <section  layout:fragment="conteudo">
+        <div class="container my-5">
+        	<h2>Formulário de Cadastro - Fornecedores</h2>
+        	
+        	<div class="row">
+        		<form th:action="@{/fornecedor}" method="post" 
+        			th:object="${fornecedor}">
+        			<div class="row">
+        				<div class="form-group">
+	        				<label for="id">Código</label>
+	        				<input type="text" class="form-control"
+	        				   th:field="*{id}"	readonly/>
+        				</div>
+        			</div>
+        			
+        			<div class="row">
+        				<div class="form-group">
+	        				<label for="nome">Nome</label>
+	        				<input type="text" class="form-control"
+	        					th:field="*{nome}" />
+        					<span th:if="${#fields.hasErrors('nome')}"
+        						th:errors="*{nome}"
+        						class="text-danger"
+        					></span>
+        				</div>
+        			</div>
+        			
+        			<div class="row">
+        				<div class="form-group">
+	        				<label for="cnpj">CNPJ</label>
+	        				<input type="text" class="form-control"
+	        					th:field="*{cnpj}" />
+        					<span th:if="${#fields.hasErrors('nome')}"
+        						th:errors="*{nome}"
+        						class="text-danger"
+        					></span>
+        				</div>
+        			</div>
+        			
+        			
+        			<div class="row">
+        				<div class="form-group">
+	        				<label for="logradouro">Logradouro</label>
+	        				<input type="text" class="form-control"
+	        					th:field="*{logradouro}" />
+        					<span th:if="${#fields.hasErrors('nome')}"
+        						th:errors="*{nome}"
+        						class="text-danger"
+        					></span>
+        				</div>
+        			</div>
+        			
+        			<div class="row">
+        				<div class="form-group">
+	        				<label for="endereco">Endereço</label>
+	        				<input type="text" class="form-control"
+	        					th:field="*{endereco}" />
+        					<span th:if="${#fields.hasErrors('nome')}"
+        						th:errors="*{nome}"
+        						class="text-danger"
+        					></span>
+        				</div>
+        			</div>
+        			
+        			<div class="row">
+        				<div class="form-group">
+	        				<label for="numero">Número</label>
+	        				<input type="number" class="form-control"
+	        					th:field="*{numero}" />
+        					<span th:if="${#fields.hasErrors('nome')}"
+        						th:errors="*{nome}"
+        						class="text-danger"
+        					></span>
+        				</div>
+        			</div>
+        			
+        			<div class="row">
+        				<div class="form-group">
+	        				<label for="bairro">Bairro</label>
+	        				<input type="text" class="form-control"
+	        					th:field="*{bairro}" />
+        					<span th:if="${#fields.hasErrors('nome')}"
+        						th:errors="*{nome}"
+        						class="text-danger"
+        					></span>
+        				</div>
+        			</div>
+        			
+        			<div class="row">
+        				<div class="form-group">
+	        				<label for="cep">CEP</label>
+	        				<input type="text" class="form-control"
+	        					th:field="*{cep}" />
+        					<span th:if="${#fields.hasErrors('nome')}"
+        						th:errors="*{nome}"
+        						class="text-danger"
+        					></span>
+        				</div>
+        			</div>
+        			
+        			<div class="row">
+        				<div class="form-group">
+	        				<label for="cidade">Cidade</label>
+	        				<input type="text" class="form-control"
+	        					th:field="*{cidade}" />
+        					<span th:if="${#fields.hasErrors('nome')}"
+        						th:errors="*{nome}"
+        						class="text-danger"
+        					></span>
+        				</div>
+        			</div>
+        			
+        			
+        			<div class="row">
+        				<div class="form-group">
+	        				<label for="telefonePrincipal">Telefone Principal</label>
+	        				<input type="text" class="form-control"
+	        					th:field="*{telefonePrincipal}" />
+        					<span th:if="${#fields.hasErrors('nome')}"
+        						th:errors="*{nome}"
+        						class="text-danger"
+        					></span>
+        				</div>
+        			</div>
+        			
+        			<div class="row">
+        				<div class="form-group">
+	        				<label for="telefoneSecundario">Telefone Secundário</label>
+	        				<input type="text" class="form-control"
+	        					th:field="*{telefoneSecundario}" />
+        					<span th:if="${#fields.hasErrors('nome')}"
+        						th:errors="*{nome}"
+        						class="text-danger"
+        					></span>
+        				</div>
+        			</div>
+        			
+        			<div class="row">
+        				<div class="form-group">
+	        				<label for="email">Email</label>
+	        				<input type="email" class="form-control"
+	        					th:field="*{email}" />
+        					<span th:if="${#fields.hasErrors('nome')}"
+        						th:errors="*{nome}"
+        						class="text-danger"
+        					></span>
+        				</div>
+        			</div>
+        			
+        			<div class="row">
+        				<div class="form-group">
+	        				<label for="pessoaContato">Contato</label>
+	        				<input type="text" class="form-control"
+	        					th:field="*{pessoaContato}" />
+        					<span th:if="${#fields.hasErrors('nome')}"
+        						th:errors="*{nome}"
+        						class="text-danger"
+        					></span>
+        				</div>
+        			</div>
+        			
+        			       			
+        			
+        			<div class="row">
+        				<button class="btn btn-primary" 
+        					type="submit" >Salvar</button>
+        				<button class="btn btn-danger" 
+        					type="reset" >Cancelar</button>
+        			</div>
+        		</form>
+        	</div> <!-- FIM div row -->
+        </div>
+        </section>
+</body>
+</html>
